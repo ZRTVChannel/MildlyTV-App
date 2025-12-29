@@ -1,0 +1,12 @@
+apply plugin: 'com.android.application'
+android {
+    namespace 'com.mildlytv.iptvbox'
+    compileSdk 34
+    defaultConfig {
+        applicationId "com.mildlytv.iptvbox"
+        minSdk 21
+        targetSdk 34
+        versionCode 1
+        versionName "1.0"
+    }
+}
