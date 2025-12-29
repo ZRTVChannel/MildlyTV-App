@@ -1,27 +1,23 @@
-name: Bikin_APK_Otomatis
+name: Build_APK_MildlyTV
 on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Inisialisasi Project
-        run: |
-          # Perintah ini untuk membuat file pembantu rakit yang hilang
-          gradle init --type basic --quiet
-          
-      - name: Build APK
-        # Kita panggil gradle langsung dari sistem komputer GitHub
+      - name: Rakit APK
+        # Kita langsung rakit tanpa perintah 'init'
         run: gradle assembleDebug
 
-      - name: Ambil Hasil APK
+      - name: Upload Hasil
         uses: actions/upload-artifact@v4
         with:
-          name: APK-MildlyTV-Berhasil
+          name: APK-MildlyTV-Jadi
           path: app/build/outputs/apk/debug/*.apk
