@@ -16,5 +16,6 @@ android {
 }
 
 dependencies {
+    // Sekarang si Robot sudah tahu cara download ini karena ada repo di atas
     implementation 'androidx.appcompat:appcompat:1.6.1'
 }
