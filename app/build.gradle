@@ -1,7 +1,11 @@
-apply plugin: 'com.android.application'
+plugins {
+    id 'com.android.application'
+}
+
 android {
     namespace 'com.mildlytv.iptvbox'
     compileSdk 34
+
     defaultConfig {
         applicationId "com.mildlytv.iptvbox"
         minSdk 21
@@ -9,4 +13,8 @@ android {
         versionCode 1
         versionName "1.0"
     }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.6.1'
 }
